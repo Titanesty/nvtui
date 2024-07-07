@@ -1,0 +1,114 @@
+.container__a {
+    @media (min-width: 1675px) {
+        .ava-p {
+            width:124px;
+            height:124px;
+        }
+        .mob-b {
+            width:170px;
+            height:74px;
+            font-size:34px;
+            text-align:center;
+        }
+        h6.mob-b-t {
+            font-weight:bold;
+        }
+        hr.tab-users-mob-adm {
+            display:none;
+        }
+
+    }
+    @media (min-width: 1090px) {
+        .ava-p {
+            width:72px;
+            height:72px;
+        }
+    }
+    @media (max-width: 1089px) {
+        .ava-p {
+            width:48px;
+            height:48px;
+        }
+    }
+    @media (min-width: 1349px) {
+        .ava-p {
+            width:64px;
+            height:64px;
+        }
+        .mob-b {
+            width:110px;
+            height:44px;
+            font-size:14px;
+            text-align:center;
+        }
+        h6.mob-b-t {
+            font-weight:bold;
+        }
+        hr.tab-users-mob-adm {
+            display:none;
+        }
+
+    }
+    @media (max-width: 359px) {
+        .mob-b {
+            width:56px;
+            height:24px;
+            font-size:8px;
+            text-align:center;
+        }
+        .mob-t {
+            font-size:14px;
+        }
+        .mob-b-t {
+            padding-bottom:9px;
+            font-weight:bold;
+        }
+        .mob-info {
+            font-size:10px;
+        }
+    }
+    @media (min-width: 360px) {
+        h6.mob-b-t {
+            font-weight:bold;
+        }
+        hr.tab-users-mob-adm {
+            display:none;
+        }
+
+    }
+    @media (max-width: 991px) {
+        .admin-users-block {
+            max-width:120%;
+        }
+    }
+    @media (min-width: 991px) {
+
+        .input-bordered {
+            width:310px;
+            margin-top:3px;
+            margin-bottom:3px;
+            display:block;
+        }
+        .admin-users-block {
+            max-width:450px;
+        }
+    }
+    .mmmob {
+        display: none;
+    }
+    @media (max-width: 991px) {
+
+        .des {
+            display: none;
+        }
+        .mmmob {
+            display: block;
+        }
+        .desktop-nav {
+            margin-top: -55px;
+        }
+    }
+    .tbl-name, .sorting_1 {
+        text-align:center;
+    }
+}

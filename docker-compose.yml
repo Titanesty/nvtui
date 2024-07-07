@@ -1,0 +1,46 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: my_database
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: my_database
+      MYSQL_USER: my_user
+      MYSQL_PASSWORD: my_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: my_phpmyadmin
+    restart: unless-stopped
+    environment:
+      PMA_HOST: db
+     # PMA_USER: my_user
+     # PMA_PASSWORD: my_password
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my_php
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_NAME: namebaza
+      DB_USER:
+      DB_PASS: pass
+
+volumes:
+  db_data:

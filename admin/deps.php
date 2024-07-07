@@ -9,7 +9,7 @@ $admin_check = "SELECT * FROM kot_user WHERE hash = '$sid'";
 $result_admin = $mysqli->query($admin_check);
 $row = mysqli_fetch_array($result_admin);
 if($row)
-{	
+{
 $last_check = $row['admin'];
 }
 // остальное - вывод юзеров и прочее
@@ -17,21 +17,21 @@ $sql_select1 = "SELECT COUNT(*) FROM kot_user";
 $result1 = $mysqli->query($sql_select1);
 $row = mysqli_fetch_array($result1);
 if($row)
-{	
+{
 $users_count = $row['COUNT(*)'];
 }
 $sql_select5 = "SELECT * FROM kot_payments ORDER BY id + 0 DESC";
 $result5 = $mysqli->query($sql_select5);
 if($last_check == 1) {
 ?>
-  
+
 <!DOCTYPE html>
 <html lang="ru" class="js">
 
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
-    
+
 
     <title><?=$sitename?> - админ-панель</title>
     <script src="https://kit.fontawesome.com/6cce539f85.js"></script>
@@ -53,13 +53,13 @@ if($last_check == 1) {
 </head>
 
 <body class="page-user no-touch">
- 
+
     <div class="topbar-wrap" style="padding-top: 0px;">
         <div class="topbar is-sticky">
             <div class="container">
                 <div>
                     <style>
-  
+
   @media (min-width: 1675px) {
                         .ava-p {
                          width:124px;
@@ -77,7 +77,7 @@ if($last_check == 1) {
                         hr.tab-users-mob-adm {
                           display:none;
                         }
-                          
+
 }
   @media (min-width: 1090px) {
                         .ava-p {
@@ -108,7 +108,7 @@ if($last_check == 1) {
                         hr.tab-users-mob-adm {
                           display:none;
                         }
-                          
+
 }
   @media (max-width: 359px) {
                         .mob-b {
@@ -135,7 +135,7 @@ if($last_check == 1) {
                         hr.tab-users-mob-adm {
                           display:none;
                         }
-                          
+
 }
   @media (max-width: 991px) {
     .btn-cc {
@@ -161,7 +161,7 @@ if($last_check == 1) {
                             display: none;
                         }
                         @media (max-width: 991px) {
-                         
+
                             .des {
                                 display: none;
                             }
@@ -225,39 +225,39 @@ if($last_check == 1) {
             </div><!-- .container -->
         </div><!-- .navbar -->
     </div><!-- .topbar-wrap -->
-    
+
     <div class="page-content">
       <div class="container">
        <div class="card content-area">
-	<div class="card-innr">
+	    <div class="card-innr">
 		<div class="card-head">
-                      
+
 			<h4 class="card-title card-title-lg mob-t" style='float:left; padding-top:8px;'>Пополнения</h4>
                       <br><br>
-            <hr>          
+            <hr>
 		</div>
-                     <div class="card-text"> 
-                      
+                     <div class="card-text">
+
                       <!-- НАЧАЛО -->
                       <center>
 
 <table id="promo-tbl" class="table-responsive-sm table table-striped- table-bordered table-hover table-checkable" style="width:100%">
-                    
+
 				<thead>
 					<tr>
-						<th class="tbl-name">ID</th> 
+						<th class="tbl-name">ID</th>
                         <th class="tbl-name">№ Транзакции</th>
-                        <th class="tbl-name">ID игрока</th> 
-                        <th class="tbl-name">Логин</th> 
+                        <th class="tbl-name">ID игрока</th>
+                        <th class="tbl-name">Логин</th>
                         <th class="tbl-name">Дата</th>
 						<th class="tbl-name">Сумма</th>
-						
-						
-						
+
+
+
 					</tr>
 				</thead>
                       <tbody>
-                      <?php 
+                      <?php
 while($row = mysqli_fetch_array($result5)) {
 $id = $row['id'];
 $date = $row['data'];
@@ -268,7 +268,7 @@ $sql_select11 = "SELECT * FROM kot_user WHERE id = '$user'";
 $result11 = $mysqli->query($sql_select11);
 $row = mysqli_fetch_array($result11);
 if($row)
-{	
+{
 $log = $row['login'];
 }
 echo "<tr role='row' class='odd'>
@@ -285,13 +285,13 @@ echo "<tr role='row' class='odd'>
                       </tbody>
 			</table>
                       </center>
-              
+
                        <!-- КОНЕЦ -->
-</div>	             
+</div>
 </div><!-- .card -->
    </div><!-- .container -->
 </div><!-- .page-content -->
-                      
+
 <div class="footer-bar">
   <div class="container">
    <div class="row align-items-center justify-content-center">
@@ -308,7 +308,7 @@ echo "<tr role='row' class='odd'>
     <li><a href="#" data-toggle="modal" data-target="#modalRules">Лицензионное соглашение</a></li>
     <li><a href="#" data-toggle="modal" data-target="#modalNoAzart">Правила</a></li>
 </ul>
-</div>					
+</div>
 </div><!-- .col -->
 </div><!-- .row -->
 </div><!-- .container -->
