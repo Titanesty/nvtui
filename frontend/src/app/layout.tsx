@@ -6,6 +6,7 @@ import "./styles/ti.css";
 import "./styles/loader-0.module.css";
 import "./styles/vendor.bundle.css";
 import "./styles/fa.module.css";
+import Topbar from "@/app/topbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      <Topbar/>
       {children}
       </body>
     </html>
