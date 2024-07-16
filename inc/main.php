@@ -1092,7 +1092,7 @@ if (empty($_SESSION['access'])) {
 
 <body class="page-user no-touch">
 
-<div class="topbar-wrap" style="padding-top: 0px;">
+    <div class="topbar-wrap" style="padding-top: 0px;">
     <div class="topbar is-sticky">
         <div class="container">
             <div class="">
