@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import {Inter} from "next/font/google";
 
 import "../styles/style.module.css";
 import "../styles/datatables.min.css";
@@ -9,7 +9,7 @@ import "../styles/fa.module.css";
 import TopBar from "@/app/admin/top-bar";
 import Footer from "@/app/admin/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({subsets: ["latin"]});
 
 // export const metadata: Metadata = {
 //   title: "Create Next App",
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
     return (
         <>
-            <TopBar />
+            <TopBar/>
             <div>{children}</div>
             <Footer/>
         </>
